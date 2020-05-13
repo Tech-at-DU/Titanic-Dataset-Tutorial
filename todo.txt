@@ -1,0 +1,15 @@
+
+
+Concepts
+
+inquery-based tutorials
+
+mean
+median
+mode
+
+variance and standard deviation
+
+Correlation
+
+line of best fit prediction
