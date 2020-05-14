@@ -173,3 +173,80 @@ We can change the layout of our bar chart to horizontal as well using the `.barh
   horizontal_bar_chart_axes.set_xlabel('Beverage type')
 
 ```
+
+# Average Caffeine
+
+Now, using the same approach as above, create a bar chart of the average caffeine per drink type.
+
+
+# Line Graph
+
+Line graphs are a type of graph where each data point is connected by lines. This can help us understand how something changes in value. In this next example we will use the data we processed in the bar chart examples to create a line graph using the plot() method.
+
+```py
+line_graph_figure = plt.figure() #The outer container
+    line_graph_axes = line_graph_figure.add_axes([0.1, 0.2, 0.8, 0.9]) #The actual chart inside the figure
+    #For more explanation: https://heartbeat.fritz.ai/introduction-to-matplotlib-data-visualization-in-python-d9143287ae39
+
+    #Create the line graph using the plot() method
+    line_graph_axes.plot(beverage_categories, average_sugars)
+
+    #Let's customize our chart!
+
+    #Give it a title
+    line_graph_axes.set_title('Line graph of average sugar in grams for different types of beverages on the Starbucks menu')
+
+    #Always label your axis or no one will be able to understand what the chart is showing
+    line_graph_axes.set_ylabel('Average sugar content in grams')
+    line_graph_axes.set_xlabel('Beverage type')
+```
+
+# Your Line Graph
+
+Now make a new bar chart and line graph for the average protein in grams for Cappuccinos, Macchiatos, and Smoothies.
+
+# Histogram
+
+Histograms are similar to bar charts, but a histogram groups numbers into ranges. The x axis of a histogram typically shows the the value ranges and the y axis corresponds to the number of items in each range. Histograms help us better visulize and understand the distribution of the data for certain values.
+
+If you have continuous numerical data, in order to group the data into ranges you need to split the data into intervals, as known as bins. Let's look at an example by creating histograms for the sugar content of each type starbucks beverage.
+
+You might be wondering how do we decided how many bins to use? This is an interesting topic and there are many ways to choose the bin number. For this class we don't need to worry too much about that and can just try out some different options and choose which one helps us visualize the data best.
+
+```py
+#recall that  sugar_in_lattes, sugar_in_teas, and sugar_in_mochas are all lists that store the sugar in grams data
+#We will create histograms that help us better see the sugar content distributions for each type of beverage
+
+number_of_bins = 10
+
+latte_histogram_figure = plt.figure()
+latte_histogram_axes = latte_histogram_figure.add_axes([0.1, 0.2, 0.8, 0.9])
+
+latte_histogram_axes.hist(sugar_in_lattes, bins=number_of_bins)
+
+latte_histogram_axes.set_title('Histogram of sugar content in Lattes')
+latte_histogram_axes.set_ylabel('Frequency')
+latte_histogram_axes.set_xlabel('Sugar in grams')
+
+tea_histogram_figure = plt.figure()
+tea_histogram_axes = tea_histogram_figure.add_axes([0.1, 0.2, 0.8, 0.9])
+
+tea_histogram_axes.hist(sugar_in_teas, bins=number_of_bins)
+
+tea_histogram_axes.set_title('Histogram of sugar content in Teas')
+tea_histogram_axes.set_ylabel('Frequency')
+tea_histogram_axes.set_xlabel('Sugar in grams')
+
+mocha_histogram_figure = plt.figure()
+mocha_histogram_axes = mocha_histogram_figure.add_axes([0.1, 0.2, 0.8, 0.9])
+
+mocha_histogram_axes.hist(sugar_in_mochas, bins=number_of_bins)
+
+mocha_histogram_axes.set_title('Histogram of sugar content in Mochas')
+mocha_histogram_axes.set_ylabel('Frequency')
+mocha_histogram_axes.set_xlabel('Sugar in grams')
+```
+
+# Your Histogram
+
+Now create your own histogram of the protein content in two different beverages of your choice.

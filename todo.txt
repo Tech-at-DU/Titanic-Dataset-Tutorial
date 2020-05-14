@@ -12,8 +12,16 @@ percent
 
 Correlation, line of best fit prediction
 
+DONE Visualization with matplotlib
+
+PDFs
+
+-no partial derivatives
+
+
 Standard deviation
 
+Linear Regression
 
 
 
