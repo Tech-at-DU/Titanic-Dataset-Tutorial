@@ -1,0 +1,4 @@
+---
+title: "Variance"
+slug: variance
+---
