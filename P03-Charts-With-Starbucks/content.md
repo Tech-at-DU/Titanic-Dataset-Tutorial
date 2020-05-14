@@ -26,7 +26,18 @@ with open('starbucks_drinkMenu_expanded.csv') as csvfile: #open the file
         print(row)#take a look at what is being printed out
 ```
 
-# Adding a Bar Chart
+# Using Pandas
+
+We can also read a CSV using the Pandas library using the builtin `.read_csv()` method. Try doing this instead.
+
+```py
+menu = pd.read_csv('starbucks_drinkMenu_expanded.csv')
+menu.head()
+```
+
+The `.head()` method shows you the first few rows and the labels on the columns.
+
+# Adding a Bar Chart of Average Sugar Content per Drink
 
 Let's start by creating a visualization that you might already be familiar with: a bar chart. Bar charts are used to show comparisons between categories of data. A bar chart will have two axis, one will typically be numerical values while the other will be some sort of category. There are two types of bar charts: vertical and horizontal. Let's looks at some examples of how to create a bar chart using our dataset!
 
@@ -41,3 +52,124 @@ In this example let's compare the sugar content of different types of drinks (la
     1. Use matplotlib to build a bar chart
 
 The first axis of our bar chart will be the beverage type, the second will be the the average sugar content in grams. More on bar charts in matplotlib [here](https://pythonspot.com/matplotlib-bar-chart/)
+
+# Getting the Headers
+
+First we'll read the csv file and pull out the headers so we can use them for labels and to pull just the sugar data.
+
+```py
+import csv #the csv library
+import matplotlib.pyplot as plt #The visualization library
+import numpy as np #provides math functions
+
+with open('starbucks_drinkMenu_expanded.csv') as csvfile: #open the file
+    #creates a csv reader object which stores the lines of the files in lists and lets us iterate over them
+    drinksreader = csv.reader(csvfile)
+    headers = next(drinksreader, None) #skip over the headers
+
+    print(headers)
+
+```
+
+# Building Our Bars
+
+Now we need to build up the amount of sugar in each beverage type.
+
+
+```py
+  # ...
+
+  #get the index that corresponds to the information we are interested in
+  drink_category_index = headers.index("Beverage")
+  sugars_index = headers.index(" Sugars (g)")
+
+  #This is where we will store the sugar info for our different beverage types
+  sugar_in_lattes = []
+  sugar_in_teas = []
+  sugar_in_mochas = []
+
+  for row in drinksreader:
+      drink_category = row[drink_category_index]
+      sugar_grams = row[sugars_index]
+      if 'Latte' in drink_category:
+          sugar_in_lattes.append(float(sugar_grams))
+      if 'Tea' in drink_category:
+          sugar_in_teas.append(float(sugar_grams))
+      if 'Mocha' in drink_category:
+          sugar_in_mochas.append(float(sugar_grams))
+
+  print(sugar_in_lattes)
+```
+
+# Building a Bi-Dimensional List
+
+Now that we have list of floats for the sugar content of various drink types, we can use our `.mean()` built in method to get the mean of each list, then pull those into one average sugar bi-dimensional list.
+
+```py
+  beverage_categories = ["Latte", 'Tea', 'Mocha']
+  #average the sugar content
+  average_sugar_in_lattes = np.mean(sugar_in_lattes)
+  average_sugar_in_teas = np.mean(sugar_in_teas)
+  average_sugar_in_mochas = np.mean(sugar_in_mochas)
+
+  average_sugars = [average_sugar_in_lattes, average_sugar_in_teas, average_sugar_in_mochas]
+
+  print(average_sugars)
+```
+
+# Building the Chart
+
+Finally we can use this `average_sugars` bi-dimensional list to make our graph
+
+```py
+
+
+    vertical_bar_chart_figure = plt.figure() #The outer container
+    vertical_bar_chart_axes = vertical_bar_chart_figure.add_axes([0.1, 0.2, 0.8, 0.9]) #The actual chart inside the figure
+    #For more explanation: https://heartbeat.fritz.ai/introduction-to-matplotlib-data-visualization-in-python-d9143287ae39
+
+    #Create the bar chart using the bar() method
+    #The color argument lets us specify a list of colors for each of the bars
+    vertical_bar_chart_axes.bar(beverage_categories, average_sugars, color=["pink", "blue", "green"])
+
+
+```
+
+# Title and Labeling our Axes
+
+No good chart lacks a title and labeled axes! Let's add these at the end.
+
+```py
+    #Give it a title
+    vertical_bar_chart_axes.set_title('Vertical bar chart of average sugar in grams for different types of beverages on the Starbucks menu')
+
+    #Always label your axis or no one will be able to understand what the chart is showing
+    vertical_bar_chart_axes.set_ylabel('Average sugar content in grams')
+    vertical_bar_chart_axes.set_xlabel('Beverage type')
+```
+
+So, how does your bar chart look now?
+
+# Horizontal Bar Chart (Stretch)
+
+We can change the layout of our bar chart to horizontal as well using the `.barh()` method. Can you use the following code to get the chart to lay horizontally?
+
+```py
+  horizontal_bar_chart_figure = plt.figure() #The outer container
+  horizontal_bar_chart_axes = horizontal_bar_chart_figure.add_axes([0.1, 0.2, 0.8, 0.9]) #The actual chart inside the figure
+  #For more explanation: https://heartbeat.fritz.ai/introduction-to-matplotlib-data-visualization-in-python-d9143287ae39
+
+  #Create the bar chart using the barh() method
+  #The color argument lets us specify a list of colors for each of the bars
+  horizontal_bar_chart_axes.barh(beverage_categories, average_sugars, color=["pink", "blue", "green"])
+
+  #Let's customize our chart!
+
+  #Give it a title
+  horizontal_bar_chart_axes.set_title('Horixontal bar chart of average sugar in grams for different types of beverages on the Starbucks menu')
+
+  #Always label your axis or no one will be able to understand what the chart is showing
+  horizontal_bar_chart_axes.set_ylabel('Average sugar content in grams')
+  horizontal_bar_chart_axes.set_xlabel('Beverage type')
+
+```

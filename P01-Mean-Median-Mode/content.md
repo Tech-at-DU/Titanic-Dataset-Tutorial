@@ -13,6 +13,13 @@ If you are not already familiar, begin by reviewing what the mean, median, and m
 
 For more videos on these concepts, continue on [Khan Academy](https://www.khanacademy.org/math/ap-statistics/summarizing-quantitative-data-ap/measuring-center-quantitative/v/statistics-intro-mean-median-and-mode)
 
+
+# New Notebook
+
+Make a folder called "ql-notebooks" and inside boot up an instance of `juypter notebook`.
+
+Inside that folder make a new notebook called "mean-media-mode".
+
 # Our Basic Libraries
 
 We're using Python 3+ as our language, but we also need some of the amazing Python packages
