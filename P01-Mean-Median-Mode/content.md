@@ -13,6 +13,13 @@ If you are not already familiar, begin by reviewing what the mean, median, and m
 
 For more videos on these concepts, continue on [Khan Academy](https://www.khanacademy.org/math/ap-statistics/summarizing-quantitative-data-ap/measuring-center-quantitative/v/statistics-intro-mean-median-and-mode)
 
+
+# New Notebook
+
+Make a folder called "ql-notebooks" and inside boot up an instance of `juypter notebook`.
+
+Inside that folder make a new notebook called "mean-media-mode".
+
 # Our Basic Libraries
 
 We're using Python 3+ as our language, but we also need some of the amazing Python packages
@@ -58,7 +65,7 @@ data = np.array([1, 3, 5, 2, 3, 7, 8, 4, 10, 0, 6, 7, 3, 0, 3, 0, 5, 7, 10, 1, 4
 
 def compute_mean(dataset):
     # make a sum variable
-    # loop over the listand add up all total
+    # loop over the list and add up all total
     # divide the total by the length of the list
     # return the mean
     return
@@ -91,51 +98,43 @@ compute_mean(data)
 
 Now we have a nice little function to compute the average of a dataset.
 
-# A Bigger Dataset
+# Using NumPy
 
-Let's use our little function to take a bigger average.
+Now that we wrote our own `compute_mean()` function, let's just use NumPy's function for the same thing.
 
-1. Go to the US Census website [Educational Attainment page](https://www.census.gov/data/tables/2019/demo/educational-attainment/cps-detailed-tables.html)
-2. Click on "Both Sexes" and download that spreadsheet
-3. Look at the row labeled "Total"
-4. Write a function that finds out the average educational attainment of an American in 2019
+```py
+np.mean(data)
+```
 
-This last step is a bit of a leap so let's break it down.
+Go and review numpy's [documentation](https://docs.scipy.org/doc/numpy/reference/generated/numpy.mean.html) on their `.mean()` function.
 
-1. Let's assign a coefficient to each level of attainment (1,2,3,4, etc)
-1. Make a new list where each element is the number of people who achieved that level of education times the level coefficient.
-1. Then take the average of that new list.
-1. Then divide that average by the total people
-1. We should, in the end have a coefficient number that stands for the average level of educational attainment.
+Always remember that the statistical libraries you are using are very powerful and often can help you solve problems very quickly if you review their documentation or google.
 
+
+# Median (Middle Element)
+
+Next we want to get the median or middle-th element of the dataset.
+
+We could do this ourselves:
 
 ```py
 
-data = np.array([8603,	13372,	62259,	34690,	22738,	49937,	22214,	3136,	4529])
+def compute_median(dataset):
 
-def mean_edu_attainment(dataset, total):
-  # create list weighted to index of position
-  weighted_list = []
 
-  for n, i in dataset:
-    weighted_list.push(n*i)
 
-  mean = compute_mean(weighted_list)
-
-  # calculate total
-  total = 0
-  for n in dataset
-    total += n
-
-  mean_attainment = mean/total
-
-  return mean_attainment
-
-mean_edu_attainment(data, total)
+    return median
 
 ```
 
-# Median (Middle Element)
+
+As we'll see over and over again, our libraries can help us out! Here is NumPy's median function:
+
+```py
+# NumPY
+np.median(dataset)
+```
+
 
 
 # Median Educational Attainment

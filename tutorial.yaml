@@ -1,7 +1,5 @@
-title: "Tutorial Template Title, max 56 characters"
+title: "Intro to Data Analysis and Statistics Tutorials"
 cover: cover.png
 solution_url: https://github.com/MakeSchool-Tutorials/Tutorial-Template/
 teaser_text: |
-    Tell the user what they will learn!
-    This can be multi-line text.
-    150 characters max!
+    In this set of mini-tutorials, participants will learn the fundamentals of statistics and tooling for exploratory data analysis.

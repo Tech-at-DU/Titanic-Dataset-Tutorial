@@ -4,12 +4,68 @@ Concepts
 
 inquery-based tutorials
 
-mean
-median
-mode
+mean, median, mode
 
-variance and standard deviation
+variance & covariance
 
-Correlation
+percent
 
-line of best fit prediction
+Correlation, line of best fit prediction
+
+DONE Visualization with matplotlib
+
+PDFs
+
+-no partial derivatives
+
+
+Standard deviation
+
+Linear Regression
+
+
+
+
+
+
+Let's use our little function to take a bigger average.
+
+1. Go to the US Census website [Educational Attainment page](https://www.census.gov/data/tables/2019/demo/educational-attainment/cps-detailed-tables.html)
+2. Click on "Both Sexes" and download that spreadsheet
+3. Look at the row labeled "Total"
+4. Write a function that finds out the average educational attainment of an American in 2019
+
+This last step is a bit of a leap so let's break it down.
+
+1. Let's assign a coefficient to each level of attainment (1,2,3,4, etc)
+1. Make a new list where each element is the number of people who achieved that level of education times the level coefficient.
+1. Then take the average of that new list.
+1. Then divide that average by the total people
+1. We should, in the end have a coefficient number that stands for the average level of educational attainment.
+
+
+```py
+
+data = np.array([8603,	13372,	62259,	34690,	22738,	49937,	22214,	3136,	4529])
+
+def mean_edu_attainment(dataset, total):
+  # create list weighted to index of position
+  weighted_list = []
+
+  for n, i in dataset:
+    weighted_list.push(n*i)
+
+  mean = compute_mean(weighted_list)
+
+  # calculate total
+  total = 0
+  for n in dataset
+    total += n
+
+  mean_attainment = mean/total
+
+  return mean_attainment
+
+mean_edu_attainment(data, total)
+
+```
