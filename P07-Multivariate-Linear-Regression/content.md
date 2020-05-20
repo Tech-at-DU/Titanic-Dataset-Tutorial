@@ -1,6 +1,7 @@
-
-
-
+---
+title: "Multivariate-Linear-Regression"
+slug: multivariate-linear-regression
+---
 
 
 

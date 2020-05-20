@@ -1,3 +1,7 @@
+---
+title: "Linear Regression"
+slug: linear-regression
+---
 
 
 
@@ -63,6 +67,9 @@ b = intercept
 m1 = coeffficient
 
 # Make Your Dataset
+
+For this example we're going to generate a random dataset.
+
 
 
 

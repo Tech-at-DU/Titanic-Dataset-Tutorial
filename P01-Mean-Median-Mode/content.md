@@ -3,16 +3,15 @@ title: "Mean, Median, Mode, Range"
 slug: mean-median-mode
 ---
 
-So now we have our Jupyter Notebook setup. Let's do some simple permutations of data: mean (average), median, mode, and range.
+So now we have our Jupyter Notebook setup. Let's begin by doing some **Descriptive Statistics** where we just get our bearings about the rough shape and dimensions of the data we are looking at. We will start by computing a few key measurements: mean (average), median, mode, and range.
 
-# Intro to Mean, Median, and Mode
+# Intro to Mean, Median, Mode, and Range
 
 If you are not already familiar, begin by reviewing what the mean, median, and mode are.
 
 ![ms-video-youtube](https://www.youtube.com/watch?v=h8EYEJ32oQ8&feature=youtu.be)
 
 For more videos on these concepts, continue on [Khan Academy](https://www.khanacademy.org/math/ap-statistics/summarizing-quantitative-data-ap/measuring-center-quantitative/v/statistics-intro-mean-median-and-mode)
-
 
 # New Notebook
 
@@ -24,15 +23,15 @@ Inside that folder make a new notebook called "mean-media-mode".
 
 We're using Python 3+ as our language, but we also need some of the amazing Python packages
 
-- **Pandas** is a library for basic data analysis
 - **NumPy** is a library for advanced mathematical computation
+- **Pandas** is a library for handling and manipulating tables of data
 - **MatPlotLib** is a library for basic data visualization
 
 Make a new cell in your Jupyter Notebook and lets add these three basic libraries we'll be using.
 
 ```py
-import pandas as pd
 import numpy as np
+import pandas as pd
 import matplotlib.pyplot as plt
 ```
 
@@ -145,6 +144,3 @@ Using our new median function, let's calculate the median educational attainment
 
 
 # Mode (Most Frequent)
-
-
-# Range & Variance

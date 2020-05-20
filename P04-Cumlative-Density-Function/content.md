@@ -1,3 +1,4 @@
-
-
-Array manipulations
+---
+title: "Cumulative Density Functions"
+slug: cdfs
+---
