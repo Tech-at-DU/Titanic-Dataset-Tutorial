@@ -3,7 +3,7 @@ title: "Charts with Starbucks"
 slug: charts-with-starbucks
 ---
 
-Data visualization is the presentation of data in graphical format. Data visualization is both an art and a science as it combines creating visualizations that are both engaging and accurate. In matheimatical applications visualizations can help you better observe trends and patterns in data, or discribe large datasets in a concise way. In this lesson we will focus on some of the most common graphs used to visualize data and describe some tools in Python that can help you create these visualizations!
+Data visualization is the presentation of data in graphical format. Data visualization is both an art and a science as it combines creating visualizations that are both engaging and accurate. In mathematical applications visualizations can help you better observe trends and patterns in data, or describe large datasets in a concise way. In this lesson we will focus on some of the most common graphs used to visualize data and describe some tools in Python that can help you create these visualizations!
 
 ### Matplotlib
 

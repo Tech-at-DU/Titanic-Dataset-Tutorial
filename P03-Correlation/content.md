@@ -15,13 +15,28 @@ Both of these words mean that two variables are dependent on each other, but the
 
 "In simple words, both the terms measure the relationship and the dependency between two variables. “Covariance” indicates the direction of the linear relationship between variables. “Correlation” on the other hand measures both the strength and direction of the linear relationship between two variables." [Towards Data Science Article](https://towardsdatascience.com/let-us-understand-the-correlation-matrix-and-covariance-matrix-d42e6b643c22)
 
-# Getting the Titanic Data Set
+# Finding a Correlation on the Titanic
 
-Now we want to use a Pandas **DataFrame** using the Pandas and we'll use the conventional variable `df`.
+Open up a new Jupyter Notebook called "Titanic Correlation"
+
+Remember to add your standard imports:
+
+```py
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import scipy.stats as stats
+```
+
+And let's keep using the Pandas DataFrame for the Titanic Dataset.
 
 ```py
 df = pd.read_csv('titanic.csv')
 ```
+
+# Correlation
+
+
 
 Next we need to write a function that will calculate pearson's correlation coefficient.
 

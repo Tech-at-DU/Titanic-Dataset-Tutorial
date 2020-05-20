@@ -12,7 +12,7 @@ Now lets start to look at how we can start to describe data and begin to get our
 We can use the NumPy function `.var(arr)` to find the variance score of an array. The `.var(arr)` function uses "the average of the squared deviations from the mean"—which in english reads: The average of the square of the absolute difference between each element and the average of the whole dataset.
 
 ```
-var = mean(abs(x - x.mean())**2)
+var = np.mean((x - np.mean(x))**2)
 ```
 
 In a Juypter Notebook, use the following code to calculate the variance of two arrays:
@@ -20,13 +20,24 @@ In a Juypter Notebook, use the following code to calculate the variance of two a
 ```py
 low_variance = [7,8,7,8,9,6,7,7,7,8,9,8,7,4]
 
-np.mean(low_variance)
-np.var(low_variance)
+print("Variance:", np.var(low_variance))
+print("Mean:", np.mean(low_variance))
+print("Min:", np.min(low_variance))
+print("Max:", np.max(low_variance))
+print("Range:", np.max(low_variance) - np.min(low_variance))
 
-high_variance = [102,2,50023,30,03040,50,20,1,50,-304,-50349]
+```
 
-np.mean(high_variance)
-np.var(high_variance)
+Now lets look at a series with high variance:
+
+```py
+high_variance = [102,2,50023,30,3040,50,20,1,50,-304,-50349]
+
+print("Variance:",np.var(high_variance))
+print("Mean:", np.mean(high_variance))
+print("Min:", np.min(high_variance))
+print("Max:", np.max(high_variance))
+print("Range:", np.max(high_variance) - np.min(high_variance))
 ```
 
 # Variance in Features in the Titanic Dataset
@@ -69,7 +80,11 @@ These histograms already show that there is much more variance in fare than in a
 
 If we want to add the average line into our graph, let's reimplement these histograms graphs using the matplotlib `.hist()` method.
 
-**Note**—the Pandas `.hist()` method is really calling the `matplotlib.hist` function under the hood! So switching to matplotlib is actually just exposing the mechanics that Pandas uses. You can start to see how the tools we are using are a suite of data analysis packages that sometimes duplicate or rely on each other.
+### Matplotlib
+
+To create our visualizations in Python we will be using the matplotlib library, which will give us the tools to easily create graphs and customize them. We will cover some of the matplotlib functionality in this lesson, but check out this resource if you want some more introduction to how to use this library.
+
+The Pandas `.hist()` method is really calling the `matplotlib.hist` function under the hood! So switching to matplotlib is actually just exposing the mechanics that Pandas uses. You can start to see how the tools we are using are a suite of data analysis packages that sometimes duplicate or rely on each other.
 
 Let's make an Age histogram using matplotlib
 

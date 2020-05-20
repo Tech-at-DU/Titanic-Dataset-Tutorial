@@ -3,13 +3,15 @@ title: "Titanic Mean, Median, and Mode"
 slug: titanic-mean-median-mode
 ---
 
-Now let's
+Now let's go get that Titanic data and see if we can use Mean, Median, and Mode to describe what was going on on the Titanic and start to ask and answer some questions.
 
 # Getting the Titanic Dataset
 
 Head over to the [Kaggle Titanic Competition](https://www.kaggle.com/c/titanic/data) webpage and on the "Data" tab click "Download" to get the csv of Titanic data.
 
-Next, in your Jupyter Notebook, click the "Upload" button and find  the file `titanic/train.csv` and upload it into your Jupyter Notebook. Rename it 'titanic.csv'
+Next, in your Jupyter Notebook, click the "Upload" button and find  the file `titanic/train.csv` and upload it into your Jupyter Notebook. Rename it 'titanic.csv'.
+
+Remember to change the name of your notebook to be "Titanic-Description" because we're focusing on describing the Titanic data using mean, median, mode, range, and variance.
 
 Because the Titanic data is a table, and not a simple array, we are going to use the Pandas python library which affords us similar methods as NumPy but is built to handle more complex data sets that have multiple labeled columns.
 

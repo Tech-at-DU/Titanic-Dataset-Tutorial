@@ -146,7 +146,7 @@ np.median(dataset)
 
 Mode is the most common element.
 
-In this case NumPY doesn't have a mode function, so we can import SciPy's `stats` module and use their mode method.
+In this case NumPy doesn't have a mode function, so we can import SciPy's `stats` module and use their mode method.
 
 First pip install SciPy
 
