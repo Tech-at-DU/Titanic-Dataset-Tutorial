@@ -1,11 +1,13 @@
 ---
-title: "Mean, Median, Mode, Range"
+title: "Mean, Median, and Mode"
 slug: mean-median-mode
 ---
 
-So now we have our Jupyter Notebook setup. Let's begin by doing some **Descriptive Statistics** where we just get our bearings about the rough shape and dimensions of the data we are looking at. We will start by computing a few key measurements: mean (average), median, mode, and range.
+So now we have our Jupyter Notebook setup. Let's begin by doing some **Descriptive Statistics** where we just get our bearings about the rough shape and dimensions of the data we are looking at. We will start by computing a few key measurements: mean (average), median, and mode.
 
-# Intro to Mean, Median, Mode, and Range
+We'll first look at these concepts with simple array examples, then we will put them to use to describe some features of the Titanic Dataset.
+
+# Intro to Mean, Median, Mode
 
 If you are not already familiar, begin by reviewing what the mean, median, and mode are.
 
@@ -119,13 +121,19 @@ We could do this ourselves:
 ```py
 
 def compute_median(dataset):
-
-
-
+    # check if the dataset is even or odd
+    if dataset % 2 != 0
+      # if odd, subtract the length by 1, divide in half, and then take the next element
+      median_index = (len(dataset) - 1)/2 + 1
+      median = dataset[median_index]
+    else
+      # otherwise, divide the dataset in half and take the mean of the two middling elements
+      left_index = len(dataset)/2 + 1
+      right_index = len(dataset)/2 - 1
+      median = (dataset(left_index) + dataset(right_index))/2
     return median
 
 ```
-
 
 As we'll see over and over again, our libraries can help us out! Here is NumPy's median function:
 
@@ -134,13 +142,56 @@ As we'll see over and over again, our libraries can help us out! Here is NumPy's
 np.median(dataset)
 ```
 
-
-
-# Median Educational Attainment
-
-Using our new median function, let's calculate the median educational attainment.
-
-
-
-
 # Mode (Most Frequent)
+
+Mode is the most common element.
+
+In this case NumPY doesn't have a mode function, so we can import SciPy's `stats` module and use their mode method.
+
+First pip install SciPy
+
+```bash
+$ pip3 install scipy
+```
+
+Now let's use it:
+
+```py
+import scipy.stats as stats
+
+mode = stats.mode(data)
+print(mode)
+```
+
+# Mean, Median, and Mode in Pandas
+
+You can also use Pandas to get your mean, median, and mode. To use Pandas, we load data into what is called a `DataFrame` object, conventionally denoted by the variable `df`. Notice that DataFrames are not simple arrays, but tables of data with named columns (denoted in the `columns=[]` option). Think of a Pandas DataFrame as an Excel spreadsheet or a SQL table.
+
+Add the following code to your Jupyter Notebook to see how Panda DataFrames can be used to
+
+```py
+import pandas as pd
+
+df = pd.DataFrame([[10, 20, 30, 40], [7, 14, 21, 28], [55, 15, 8, 12],
+                   [15, 14, 1, 8], [7, 1, 1, 8], [5, 4, 9, 2]],
+                  columns=['Apple', 'Orange', 'Banana', 'Pear'],
+                  index=['Basket1', 'Basket2', 'Basket3', 'Basket4',
+                         'Basket5', 'Basket6'])
+
+print("\n----------- Calculate Mean -----------\n")
+print(df.mean())
+
+print("\n----------- Calculate Median -----------\n")
+print(df.median())
+
+print("\n----------- Calculate Mode -----------\n")
+print(df.mode())
+```
+
+Or to simplify use the Pandas `.describe()` method
+
+```py
+df.describe()
+```
+
+Reference: [PythonProgramming.in—Find Mean, Median and Mode of DataFrame in Pandas](https://www.pythonprogramming.in/find-mean-median-and-mode-of-dataframe-in-pandas.html)

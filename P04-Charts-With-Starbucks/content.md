@@ -13,7 +13,6 @@ To create our visualizations in Python we will be using the matplotlib library, 
 
 In this chapter we will be using the drinks file from the [Starbucks nutrition dataset](https://www.kaggle.com/starbucks/starbucks-menu). This dataset includes the nutritional information for Starbucks’ food and drink menu items. All nutritional information for drinks are for a 12oz serving size. In this lesson we will be using the Starbucks drinks csv file as the basis for our visualizations. In python there is a library called csv that makes handling csv files easier. Take a look at the example below to learn more about how to use this library.
 
-
 Create a new Jupyter Notebook in your `ql-tutorials folder` called "starbucks-drink-menu" and put the drink menu data set .csv in the same directory. First let's look at the csv:
 
 ```py
