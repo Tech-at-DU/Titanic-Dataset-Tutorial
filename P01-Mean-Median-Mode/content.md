@@ -138,6 +138,12 @@ mean_edu_attainment(data, total)
 # Median (Middle Element)
 
 
+# Median Educational Attainment
+
+Using our new median function, let's calculate the median educational attainment.
+
+
+
 
 # Mode (Most Frequent)
 
