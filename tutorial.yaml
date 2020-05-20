@@ -1,5 +1,5 @@
-title: "Intro to Data Analysis and Statistics Tutorials"
-cover: cover.png
+title: "Titanic Dataset Tutorial: An Intro to Data Analysis and Statistics"
+cover: cover.jpg
 solution_url: https://github.com/MakeSchool-Tutorials/Tutorial-Template/
 teaser_text: |
-    In this set of mini-tutorials, participants will learn the fundamentals of statistics and tooling for exploratory data analysis.
+    In this tutorial, participants will learn the fundamentals of statistics and tooling for exploratory data analysis using the classic Titanic Dataset.
