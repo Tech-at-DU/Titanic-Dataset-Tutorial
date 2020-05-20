@@ -65,7 +65,7 @@ data = np.array([1, 3, 5, 2, 3, 7, 8, 4, 10, 0, 6, 7, 3, 0, 3, 0, 5, 7, 10, 1, 4
 
 def compute_mean(dataset):
     # make a sum variable
-    # loop over the listand add up all total
+    # loop over the list and add up all total
     # divide the total by the length of the list
     # return the mean
     return
@@ -98,9 +98,9 @@ compute_mean(data)
 
 Now we have a nice little function to compute the average of a dataset.
 
-# Using Pandas
+# Using NumPy
 
-Now that we wrote our own `compute_mean()` function, let's just use pandas' function for the same thing.
+Now that we wrote our own `compute_mean()` function, let's just use NumPy's function for the same thing.
 
 ```py
 np.mean(data)
@@ -108,10 +108,33 @@ np.mean(data)
 
 Go and review numpy's [documentation](https://docs.scipy.org/doc/numpy/reference/generated/numpy.mean.html) on their `.mean()` function.
 
-Always remember that the statistical libraries you are using are very powerful and often can help you solve problems very quickly if you review their documentaiton or google.
+Always remember that the statistical libraries you are using are very powerful and often can help you solve problems very quickly if you review their documentation or google.
 
 
 # Median (Middle Element)
+
+Next we want to get the median or middle-th element of the dataset.
+
+We could do this ourselves:
+
+```py
+
+def compute_median(dataset):
+
+
+
+    return median
+
+```
+
+
+As we'll see over and over again, our libraries can help us out! Here is NumPy's median function:
+
+```py
+# NumPY
+np.median(dataset)
+```
+
 
 
 
