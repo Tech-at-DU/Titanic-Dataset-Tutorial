@@ -188,10 +188,12 @@ print("\n----------- Calculate Mode -----------\n")
 print(df.mode())
 ```
 
-Or to simplify use the Pandas `.describe()` method
+Reference: [PythonProgramming.in—Find Mean, Median and Mode of DataFrame in Pandas](https://www.pythonprogramming.in/find-mean-median-and-mode-of-dataframe-in-pandas.html)
+
+# .describe()
+
+Or to simplify use the Pandas `.describe()` method:
 
 ```py
 df.describe()
 ```
-
-Reference: [PythonProgramming.in—Find Mean, Median and Mode of DataFrame in Pandas](https://www.pythonprogramming.in/find-mean-median-and-mode-of-dataframe-in-pandas.html)
