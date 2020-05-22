@@ -1,5 +1,5 @@
 ---
-title: "Mean, Median, and Mode"
+title: "Describing the Titanic—Mean, Median, and Mode"
 slug: mean-median-mode
 ---
 
@@ -49,7 +49,7 @@ data = np.array([1, 3, 5, 2, 3, 7, 8, 4, 10, 0, 6, 7, 3, 0, 3, 0, 5, 7, 10, 1, 4
 
 How do we get the average of these numbers?
 
-Let's right a function called `compute_mean`
+Let's write a function called `compute_mean`
 
 ```py
 def compute_mean(dataset):
@@ -197,3 +197,8 @@ Or to simplify use the Pandas `.describe()` method:
 ```py
 df.describe()
 ```
+
+Use this [Pandas Cheat Sheet](https://www.dataquest.io/blog/pandas-cheat-sheet/) for reference for awsome Pandas Methods.
+
+children = df[df['Age'] < 16]
+children.shape

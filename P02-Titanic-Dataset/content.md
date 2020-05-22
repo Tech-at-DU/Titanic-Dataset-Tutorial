@@ -22,6 +22,16 @@ df = pd.read_csv('titanic.csv')
 df.head()
 ```
 
+# Features and the Data Dictionary
+
+Columns in a table of data like this are called "Features" in data science.
+
+There are many features here, but what do they mean? What is `sibsp`? Or `parch`? To know this you have to look at the data dictionary. This dataset has a clear data dictionary on [its page in kaggle.com](https://www.kaggle.com/c/titanic/data).
+
+Review the meaning of each feature.
+
+Scroll through the data and look at it all. What do you notice? What questions or hypothesis are coming up for you that you want tests or prove?
+
 # Asking Questions
 
 Data analysis and data science are all about exploring datasets through asking and answering questions about the data. Here are some questions we might ask about passengers on the Titanic:

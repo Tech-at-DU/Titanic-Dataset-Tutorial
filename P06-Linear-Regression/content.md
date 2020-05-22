@@ -17,7 +17,7 @@ What is Linear Regression
 
 
 
-
+"**Mean Squared Error Definition** The mean squared error tells you how close a regression line is to a set of points. It does this by taking the distances from the points to the regression line (these distances are the “errors”) and squaring them. The squaring is necessary to remove any negative signs." Reference [Statistics How To—Mean Squared Error: Definition and Example](https://www.statisticshowto.com/mean-squared-error/)
 
 
 Single Variable: https://www.youtube.com/watch?v=8jazNUpO3lQ

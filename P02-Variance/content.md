@@ -1,5 +1,5 @@
 ---
-title: "Variance on the Titanic"
+title: "Who's Here?—Variance on the Titanic"
 slug: variance
 ---
 

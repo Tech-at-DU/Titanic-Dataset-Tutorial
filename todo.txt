@@ -69,3 +69,32 @@ def mean_edu_attainment(dataset, total):
 mean_edu_attainment(data, total)
 
 ```
+
+Linear Regression
+  - Remove outliers
+
+
+Mean and standard divination, what was the chance someone got >80
+
+Data detective—tempurature of two cities, difference and sum.
+
+Nan values
+
+Titanic stowaways, try to determine their ages, what class they hid in etc.
+
+Excellent article on types of bar charts
+https://towardsdatascience.com/histograms-and-density-plots-in-python-f6bda88f5ac0
+
+Amazing article on this Dataset
+https://towardsdatascience.com/predicting-the-survival-of-titanic-passengers-30870ccc7e8
+
+
+.astype('category').cat.codes)
+
+
+tips dataset—https://github.com/mwaskom/seaborn-data/blob/master/tips.csv
+Visualizing tips dataset—https://seaborn.pydata.org/tutorial/relational.html
+
+
+Normal distribution and z-score
+https://www.youtube.com/watch?v=4Fta6KQ1QHQ
