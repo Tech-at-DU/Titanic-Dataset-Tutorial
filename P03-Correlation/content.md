@@ -83,7 +83,7 @@ df['Survived'].corr(df['Sex'])
 
 So what can we conclude?
 
-# Interprreting Correlation
+# Interpreting Correlation
 
 **Positive 1**—`1.000` means that there is a perfect, positive correlation between two features, as one feature goes up, the other goes up exactly in proportion. If there is a negative number
 
@@ -109,19 +109,17 @@ Graphically strong and weak correlation would look like this:
 
 # Correlations Between Age and Sex
 
-Since we computed the correlation between Sex and Survival (-54.3%), and Age and Survival (-7.72%), we can say:
+Since we computed the correlation between Sex and Survival (-54.3%), and Age and Survival (-7.72%), we can say a few things with confidence:
 
 ```
 A passenger's being a woman was strongly positively correlated with her survival aboard the titanic.
-```
 
-```
 A passenger's age was very weakly negatively correlated with survival.
 ```
 
-But "Age" is not "Children" is it?
+But "Age" is not "Children" is it? How do we find out if being under 16 improved your chance at survival? What was the probability that someone under 16 survived vs. someone over 16?
 
-If we want to know the correlation with children, we need to use another feature of our dataset:  
+This question can only be answered using Probability, which we will do in the next chapter. For now, let's look at the **Correlation Matrix**.
 
 # Pandas Correlation Matrix
 
@@ -181,6 +179,6 @@ for dataset in data:
     dataset['Sex'] = dataset['Sex'].map(genders)
 ```
 
-Now rerun your heatmap. We found another strong correlation! Between Sex and Survival.
+Now rerun your heatmap. We see the same strong correlation between Sex and Survival!
 
 In the next chapter we'll use probability to find some concrete insights from this hint in the form of a correlation.

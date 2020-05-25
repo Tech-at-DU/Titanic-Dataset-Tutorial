@@ -5,14 +5,41 @@ slug: probability
 
 Let's dig into the survival rate on the Titanic and what features most influenced a passengers cha
 
-1. What percentage of children survived?
-1. What percentage of women survived?
-1. What percentage of men survived?
+# Conditional Probability and Percentage
 
-Conditional Probability
+1. What was the probability of survival for a child? P(Survived=true | Age<16)
+1. What was the probability of survival for a woman? P(Survived= true | Sex=female)
+1. What was the probability of survival for a man? P(Survived= true | Sex=male)
 
-1. What effect did being a child have on your survival?
-1. What effect did being a woman have on your survival?
+For these straightforward probabilities, we can simply take the percentage of the group who survived.
+
+```py
+children = df[df['Age'] < 16]
+surviving_children = df[(df['Age'] < 16) & (df['Survived'] == 1)]
+child_chance_of_survival = surviving_children / children
+child_chance_of_survival
+```
+
+
+
+1. What is the conditional probability that a person survives given their sex and passenger-class?
+
+```
+P(S= true | G=female,C=1)
+P(S= true | G=female,C=2)
+P(S= true | G=female,C=3)
+P(S= true | G=male,C=1)
+P(S= true | G=male,C=2)
+P(S= true | G=male,C=3)
+```
+
+To answer this final set of questions takes a little more than just caluclating percentage.
+
+```
+What is the probability that a child who is in third class and is 10 years old or younger survives? Since the number of data points that satisfy the condition is small use the "bayesian" approach and represent your probability as a beta distribution. Calculate a belief distribution for:
+S= true | A≤10,C=3
+You can express your answer as a parameterized distribution.
+```
 
 # Child Survival Rate
 
