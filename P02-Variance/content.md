@@ -40,6 +40,37 @@ print("Max:", np.max(high_variance))
 print("Range:", np.max(high_variance) - np.min(high_variance))
 ```
 
+# Standard Deviation
+
+Another key metric for explaining variance is to take a series' **standard deviation**.
+
+Standard deviation is defined as the squareroot of the sum of the square of all deviations from the mean divided by one less the total number of values.
+
+![standard deviation](assets/std.png)
+
+As a challenge, write the python for each step to create your own standard deviation function. Then check your work, using the NumPy `.std()` function.
+
+```py
+def standard_deviation(series):
+  # Compute the mean of the series
+  # Find the squares of all the deviations from the mean
+  # Sum the squares of the deviations from the mean
+  # Divide this sum by the total number of data values
+  # Take the squareroot of this quotient.
+```
+
+Run your function against the NumPy `.std()` function.
+
+```py
+print("Standard Deviation:", standard_deviation(low_variance))
+print("Standard Deviation:", np.std(low_variance))
+
+print("Standard Deviation:", standard_deviation(high_variance))
+print("Standard Deviation:", np.std(high_variance))
+```
+
+Notice that the standard deviation of the low_variance is quite low, and of high variance is quite high.
+
 # Variance in Features in the Titanic Dataset
 
 So let's see what some of the variance in the Titanic Dataset was? Let's try to answer one question about variance:
@@ -112,3 +143,20 @@ plt.xlabel('Fare (in Dollars)')
 ```
 
 These two charts illustrate how fares had a much larger (10x) variance than ages did on the Titanic.
+
+
+# +/- 1 Standard Deviation
+
+Let's add lines for one standard deviation above and one below of the mean:
+
+```py
+# Age
+plt.axvline(df.Age.mean()+df.Age.std(), color='k', linestyle='dashed', linewidth=1)
+plt.axvline(df.Age.mean()-df.Age.std(), color='k', linestyle='dashed', linewidth=1)
+```
+
+```py
+# Fare
+plt.axvline(df.Fare.mean()+df.Fare.std(), color='k', linestyle='dashed', linewidth=1)
+plt.axvline(df.Fare.mean()-df.Fare.std(), color='k', linestyle='dashed', linewidth=1)
+```
