@@ -44,9 +44,9 @@ df.median('Age')
 df.mode('Age')
 ```
 
-**What was the mean, median, and mode of people's fare?**
+**What was the mean, median, and mode of people's Fare?**
 
-Can you calculate this one on your own?
+Can you calculate these on your own?
 
 # Stop for a Second
 
