@@ -67,9 +67,3 @@ From this we can see very clearly the various probabilities. For instance, we ca
 ```
 Over 85% of the passengers of the Titanic were over 18
 ```
-
-
-
-# Various Known Probability Distributions
-
-If we compare the probability distributions of various systems, statisticians have identified some recurring distributions. We've already seen some of these distributions in the Titanic data. For example, when we graphed the Fare PDF, we saw what is called  
