@@ -1,5 +1,5 @@
 ---
-title: "Women and Children First: Probability on the Titanic"
+title: "Women and Children First—Probability Aboard the Titanic"
 slug: probability
 ---
 

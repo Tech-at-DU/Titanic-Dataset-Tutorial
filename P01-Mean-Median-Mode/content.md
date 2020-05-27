@@ -1,5 +1,5 @@
 ---
-title: "Describing the Titanic—Mean, Median, and Mode"
+title: "Using Statistical Packages"
 slug: mean-median-mode
 ---
 
@@ -17,9 +17,9 @@ For more videos on these concepts, continue on [Khan Academy](https://www.khanac
 
 # New Notebook
 
-Make a folder called "ql-notebooks" and inside boot up an instance of `juypter notebook`.
+Make a folder called "The Titanic" and inside boot up an instance of `juypter notebook`.
 
-Inside that folder make a new notebook called "mean-media-mode".
+Inside that folder make a new notebook called "mean-median-mode".
 
 # Our Basic Libraries
 

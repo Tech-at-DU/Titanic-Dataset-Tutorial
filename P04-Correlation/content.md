@@ -1,5 +1,5 @@
 ---
-title: "Correlation on the Titanic"
+title: "What Matters Most?—Correlation Aboard the Titanic"
 slug: correlation
 ---
 

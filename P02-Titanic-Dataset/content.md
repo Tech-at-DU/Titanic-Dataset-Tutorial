@@ -1,5 +1,5 @@
 ---
-title: "Titanic Mean, Median, and Mode"
+title: "Describing the Titanic—Mean, Median, and Mode"
 slug: titanic-mean-median-mode
 ---
 

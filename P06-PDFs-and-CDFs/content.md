@@ -1,6 +1,6 @@
 ---
-title: "PDFs—Probability Density Function"
-slug: pdfs
+title: "Representing Probabilities with PDFs and CDFs Aboard the Titanic"
+slug: pdfs-and-cdfs
 ---
 
 We've calculated some individual probabilities, but we can go further with probability. We can calculate and graph *every* probability, and thereby glean further insights into our data. A graph of every probability is called a **Probability Density Function**, and you've probably already seen them and heard of them, since they are popularly called **Bell Curves**.
