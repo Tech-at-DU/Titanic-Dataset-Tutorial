@@ -11,13 +11,14 @@ We'll first look at these concepts with simple array examples, then we will put 
 
 If you are not already familiar, begin by reviewing what the mean, median, and mode are.
 
-![ms-video-youtube](https://www.youtube.com/watch?v=h8EYEJ32oQ8&feature=youtu.be)
+![ms-video-youtube](https://www.youtube.com/watch?v=h8EYEJ32oQ8)
 
-For more videos on these concepts, continue on [Khan Academy](https://www.khanacademy.org/math/ap-statistics/summarizing-quantitative-data-ap/measuring-center-quantitative/v/statistics-intro-mean-median-and-mode)
+> [info]
+> For more videos on these concepts, continue on [Khan Academy](https://www.khanacademy.org/math/ap-statistics/summarizing-quantitative-data-ap/measuring-center-quantitative/v/statistics-intro-mean-median-and-mode)
 
 # New Notebook
 
-Make a folder called "ql-notebooks" and inside boot up an instance of `juypter notebook`.
+Make a folder called `ql-notebooks` and inside run `$ juypter notebook`.
 
 Inside that folder make a new notebook called "mean-media-mode".
 

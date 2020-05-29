@@ -27,9 +27,10 @@ Anaconda comes installed with:
 
 # Installing Anaconda
 
-Please follow this tutorial to install Anaconda on your computer:
-
-[Install Anaconda Navigator Tutorial](https://www.datacamp.com/community/tutorials/installing-anaconda-mac-os-x))
+>[action]
+>
+> Please follow this tutorial to install Anaconda on your computer:
+> [Install Anaconda Navigator Tutorial](https://www.datacamp.com/community/tutorials/installing-anaconda-mac-os-x))
 
 # Getting Started with Jupyter Notebooks
 
