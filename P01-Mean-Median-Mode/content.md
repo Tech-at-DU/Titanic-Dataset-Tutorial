@@ -1,5 +1,5 @@
 ---
-title: "Describing the Titanic—Mean, Median, and Mode"
+title: "Using Statistical Packages"
 slug: mean-median-mode
 ---
 
@@ -18,9 +18,13 @@ If you are not already familiar, begin by reviewing what the mean, median, and m
 
 # New Notebook
 
+<<<<<<< HEAD
 Make a folder called `ql-notebooks` and inside run `$ juypter notebook`.
+=======
+Make a folder called "The Titanic" and inside boot up an instance of `juypter notebook`.
+>>>>>>> 82b1009abe74ca920c54ddc8cba1eb82584ca284
 
-Inside that folder make a new notebook called "mean-media-mode".
+Inside that folder make a new notebook called "mean-median-mode".
 
 # Our Basic Libraries
 

@@ -1,5 +1,5 @@
 ---
-title: "Correlation on the Titanic"
+title: "What Matters Most?—Correlation Aboard the Titanic"
 slug: correlation
 ---
 
@@ -16,11 +16,10 @@ Let's take an elemental correlation:
 
 What other common correlations can you think of?
 
-# Correlation vs. Causation
-
-Do not fall into the trap of mistaking correlation for causation. The rain falls, the plants grow, thats causation because there is a causal link between the water of the rain and the plants growing. On the other hand, did you know that the rates of violent crime and murder have been known to jump when ice cream sales do?
-
-Reference [HowStuffWorks—10 Correlations That Are Not Causations](https://science.howstuffworks.com/innovation/science-questions/10-correlations-that-are-not-causations.htm)
+> [info]
+> Correlation vs. Causation
+> Do not fall into the trap of mistaking correlation for causation. The rain falls, the plants grow, thats causation because there is a causal link between the water of the rain and the plants growing. On the other hand, did you know that the rates of violent crime and murder have been known to jump when ice cream sales do?
+> Reference [HowStuffWorks—10 Correlations That Are Not Causations](https://science.howstuffworks.com/innovation/science-questions/10-correlations-that-are-not-causations.htm)
 
 # Covariance vs. Correlation
 

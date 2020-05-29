@@ -3,8 +3,6 @@ title: "Linear Regression"
 slug: linear-regression
 ---
 
-
-
 https://towardsdatascience.com/introduction-to-linear-regression-in-python-c12a072bedf0
 
 
@@ -64,7 +62,7 @@ go through the derivation here, but using calculus we can show that the values o
 m is: Cov(area, price) / Var(area).
 
 b = intercept
-m1 = coeffficient
+m1 = coefficient
 
 # Make Your Dataset
 

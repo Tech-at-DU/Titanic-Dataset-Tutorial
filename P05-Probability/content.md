@@ -1,47 +1,15 @@
 ---
-title: "Women and Children First: Probability on the Titanic"
+title: "Women and Children First—Probability Aboard the Titanic"
 slug: probability
 ---
 
-Let's dig into the survival rate on the Titanic and what features most influenced a passengers cha
+Let's dig into the survival rate on the Titanic and what features most influenced a passengers chances of survival. We'll move beyond correlation to derive the actual probabilities of various features.
 
-# Conditional Probability and Percentage
-
-1. What was the probability of survival for a child? P(Survived=true | Age<16)
-1. What was the probability of survival for a woman? P(Survived= true | Sex=female)
-1. What was the probability of survival for a man? P(Survived= true | Sex=male)
-
-For these straightforward probabilities, we can simply take the percentage of the group who survived.
-
-```py
-children = df[df['Age'] < 16]
-surviving_children = df[(df['Age'] < 16) & (df['Survived'] == 1)]
-child_chance_of_survival = surviving_children / children
-child_chance_of_survival
-```
-
-
-
-1. What is the conditional probability that a person survives given their sex and passenger-class?
-
-```
-P(S= true | G=female,C=1)
-P(S= true | G=female,C=2)
-P(S= true | G=female,C=3)
-P(S= true | G=male,C=1)
-P(S= true | G=male,C=2)
-P(S= true | G=male,C=3)
-```
-
-To answer this final set of questions takes a little more than just caluclating percentage.
-
-```
-What is the probability that a child who is in third class and is 10 years old or younger survives? Since the number of data points that satisfy the condition is small use the "bayesian" approach and represent your probability as a beta distribution. Calculate a belief distribution for:
-S= true | A≤10,C=3
-You can express your answer as a parameterized distribution.
-```
+Open up a new Jupyter Notebook called "Titanic Probability" and add your standard libraries and define your pandas DataFrame using the `titanic.csv`.
 
 # Child Survival Rate
+
+Was it really women and children first on the Titanic?
 
 We have to "dig in" to the data. Correlation is not giving us a clear answer about if children were more likely to survive the sinking of the Titanic. We see there was a pretty weak correlation between being older and dying. What if we want to find out if any children died?
 
@@ -108,24 +76,104 @@ Because 71% is about 4x 17%.
 
 But we saw that correlation between survival and sex was high, but not so high for age. What if we looked at the chance of survival of grown men, grown women, and children of both sexes?
 
-# Women and Children First: Getting to the Bottom
+# Conditional Probability and Percentage
+
+Let's ask some simple probability questions:
+
+1. What was the probability of survival for a child? P(Survived=true | Age<16)
+1. What was the probability of survival for a woman? P(Survived= true | Sex=female)
+1. What was the probability of survival for a man? P(Survived= true | Sex=male)
+
+For these straightforward probabilities, we can simply take the percentage of the group who survived.
+
+We'll use the first element of the `.shape` method to extract the number of rows in each the DataFrame. (`.shape` returns two integers in an array—the first is the row count, the second is the column count of a DataFrame.)
+
+All we have to do is divide the number of surviving children by the total number of children to get the percentage chance of survival for children.
 
 ```py
 children = df[df['Age'] < 16]
-child_survival_rate = children['Survived'].value_counts(normalize=True) * 100
-child_survival_rate
+surviving_children = df[(df['Age'] < 16) & (df['Survived'] == 1)]
+child_chance_of_survival = surviving_children.shape[0] / children.shape[0]
+format(child_chance_of_survival, ".0%")
 ```
+
+We use Python's built-in `format()` function to return a nice clean percentage rounded to the ones column.
+
+Let's do the same for women. (Remember that Sex has returned to a string column in this new notebook.)
 
 ```py
-women = df[(df['Sex'] == "female") & (df['Age'] > 16)]
-women_survival_rate = women['Survived'].value_counts(normalize=True) * 100
-women_survival_rate
+women = df[(df['Sex'] == 'female') & (df['Age'] > 16)]
+surviving_women = df[(df['Sex'] == 'female') & (df['Age'] > 16) & (df['Survived'] == 1)]
+women_chance_of_survival = surviving_women.shape[0] / women.shape[0]
+format(women_chance_of_survival, ".0%")
 ```
 
-What can you conclude? Children had a 59% chance of survival. Grown women had a 77% chance of survival, and grown men had a 17% chance of survival.
+Now calculate it for grown men on your own.
+
+Now let's graph them:
+
+```py
+import matplotlib.pyplot as plt
+
+fig = plt.figure()
+ax = fig.add_axes([0,0,1,1])
+x_axis = ["Children", "Women", "Men"]
+data = [child_chance_of_survival, women_chance_of_survival, men_chance_of_survival]
+ax.bar(x_axis, data)
+plt.show()
+```
+
+What can you conclude?
+
+# Multiple Factors: Class
+
+So grown women had the best chance of surviving, and children also had a strong chance. Men, however, did not. From this data we could say a definitive insight such as:
 
 ```
-Children had a
+Less than 1 in 5 men on the Titanic survived.
+
+Almost 4 in 5 women on the Titanic survived.
+```
+
+Couldn't we also say:
+
+```
+Women had almost 4x the survival rate of men
+```
+
+This last statement is relative and therefore far more deceptive than the first two which are absolute. Because if women's survival rate was 4x that of men that could mean either:
+
+```
+.01% - men survival rate
+.04% - women survival rate
+```
+
+or
+
+```
+20% - men survival rate
+80% - women survival rate
+```
+
+But is being a child or a woman or man the most definitive factor in someone's survival aboard the Titanic. If we had a map of the Titanic and available life boats, we might be able to see if each passengers' cabin's proximity to a lifeboat was the determing factor. We do have another factor that might hypothetically contribute to surival: class.
+
+We have the fare price and ticket class of each passenger. So we could ask a question:
+
+```
+Which was more important to survival aboard the Titanic? Your class, your being a child, or your sex?
+```
+
+or, using statistical jargon:
+
+```
+What is the conditional probability that a person survives given their sex and passenger-class?
+
+P(S= true | G=female,C=1)
+P(S= true | G=female,C=2)
+P(S= true | G=female,C=3)
+P(S= true | G=male,C=1)
+P(S= true | G=male,C=2)
+P(S= true | G=male,C=3)
 ```
 
 # The Men Who Lived
@@ -154,7 +202,7 @@ If we take the median fare and class of each the difference becomes even more st
 
 # First vs. Third Class Men
 
-So perhaps the clearest way to express this insight is to say the percent chance of dying for a 1st class and a 3rd class man?
+So perhaps the clearest way to express this insight is to say the percent chance of dying for a 1st class and a 3rd class man? We can use the `.value_counts(normalize=True) * 100` method to output a percentage as well.
 
 ```py
 third_class_adult_men = df[(df['Sex'] == "male") & (df['Age'] > 16) & (df['Pclass'] == 3)]
@@ -212,3 +260,9 @@ sn.barplot(x='Sex', y='Survived', hue="Pclass", data=df)
 ```
 
 First and second class women survived at much higher rates on the Titanic. Perhaps we can hypothesize that a sense of "Chivalry" was alive and well in those times. Maybe if we read some first hand accounts of survivors we could confirm this hypothesis.
+
+# Summing Up
+
+Can you say which factor is the most important?
+
+Do you need to do more calculations to see it clearly?
