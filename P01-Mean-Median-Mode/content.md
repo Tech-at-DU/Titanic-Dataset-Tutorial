@@ -7,7 +7,13 @@ So now we have our Jupyter Notebook setup. Let's begin by doing some **Descripti
 
 We'll first look at these concepts with simple array examples, then we will put them to use to describe some features of the Titanic Dataset.
 
-# Intro to Mean, Median, Mode
+# Intro to Mean, Median, Mode, and Range
+
+Whenever you first get a dataset, you want to get a sense of it. Where are its ends? Where is its middle? How big of a spread are there? What's its overall anatomy.
+
+Who is on the Titanic? Was it a boat full of children or only adults? Could only rich people get tickets? 
+
+To get this general sense of a dataset, we can calculate the mean, median, mode, and the range.
 
 If you are not already familiar, begin by reviewing what the mean, median, and mode are.
 
@@ -18,11 +24,7 @@ If you are not already familiar, begin by reviewing what the mean, median, and m
 
 # New Notebook
 
-<<<<<<< HEAD
-Make a folder called `ql-notebooks` and inside run `$ juypter notebook`.
-=======
 Make a folder called "The Titanic" and inside boot up an instance of `juypter notebook`.
->>>>>>> 82b1009abe74ca920c54ddc8cba1eb82584ca284
 
 Inside that folder make a new notebook called "mean-median-mode".
 
@@ -197,13 +199,21 @@ Reference: [PythonProgramming.in—Find Mean, Median and Mode of DataFrame in Pa
 
 # .describe()
 
-Or to simplify use the Pandas `.describe()` method:
+Or to simplify by using the Pandas `.describe()` method:
 
 ```py
 df.describe()
 ```
 
-Use this [Pandas Cheat Sheet](https://www.dataquest.io/blog/pandas-cheat-sheet/) for reference for awsome Pandas Methods.
+Use this [Pandas Cheat Sheet](https://www.dataquest.io/blog/pandas-cheat-sheet/) for reference for awesome Pandas Methods.
 
+# Shape
+
+Another useful method is `.shape()` which returns an array with the number of rows and columns in a DataFrame.
+
+Try it by querying for all children and then checking the number of rows (number of children) and columns (number of features)
+
+```py
 children = df[df['Age'] < 16]
 children.shape
+```
