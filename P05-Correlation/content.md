@@ -111,9 +111,9 @@ Graphically strong and weak correlation would look like this:
 Since we computed the correlation between Sex and Survival (-54.3%), and Age and Survival (-7.72%), we can say a few things with confidence:
 
 ```
-A passenger's being a woman was strongly positively correlated with her survival aboard the titanic.
+A passenger's being a man was strongly negatively correlated with his survival aboard the titanic.
 
-A passenger's age was very weakly negatively correlated with survival.
+A passenger's being older was very weakly negatively correlated with survival.
 ```
 
 But "Age" is not "Children" is it? How do we find out if being under 16 improved your chance at survival? What was the probability that someone under 16 survived vs. someone over 16?

@@ -36,8 +36,8 @@ living_children.hist()
 ```
 
 ```py
-dead_children = df[(df['Age'] < 16) & (df['Survived'] == 0)]
-dead_children
+not_surviving_children = df[(df['Age'] < 16) & (df['Survived'] == 0)]
+not_surviving_children
 ```
 
 Do you see anything that could answer our question about women and children?
@@ -47,7 +47,7 @@ Does calling the `.hist()` method help see any more?
 ```py
 living_children.hist()
 
-dead_children.hist()
+not_surviving_children.hist()
 ```
 
 # Women and Children vs. Grown Men

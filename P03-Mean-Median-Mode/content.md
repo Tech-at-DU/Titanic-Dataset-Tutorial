@@ -5,13 +5,21 @@ slug: titanic-mean-median-mode
 
 Now let's go get that Titanic data and see if we can use Mean, Median, and Mode to describe what was going on on the Titanic and start to ask and answer some questions.
 
-# Asking Questions
+# Exploring, Asking Questions, Gaining Insights
 
-Data analysis and data science are all about exploring datasets through asking and answering questions about the data. Here are some questions we might ask about passengers on the Titanic:
+We are going to do some **Exploratory Data Analysis** (EDA), and as we go along, we're going to gain some familiarity with statistical identities and formulas to better understand what was happening on the Titanic.
 
-**What is the mean, median, and mode of people's Age?**
+That means we are exploring datasets through asking and answering questions about the data. Here are some questions we might ask about passengers on the Titanic:
 
-Try using your mean, median, and mode function and then verify them with the Pandas mean, median, and mode functions.
+* Which gender had a better chance of survival?
+* Which social class had a better chance of survival?
+* Which age group had a better chance of survival?
+
+# Getting Started: Mean Median and Mode
+
+To start honing in on providing confident answers to questions like those, we first have to get a general sense of who was aboard the Titanic.
+
+We can use the mean, median, and mode functions to gain some **insights** about people's age aboard the Titanic. Use yor methods first and then verify them with the Pandas mean, median, and mode functions.
 
 ```py
 df.mean('Age')
@@ -22,7 +30,7 @@ df.mode('Age')
 > [action]
 > **What was the mean, median, and mode of people's Fare?**
 >
-> Can you calculate these on your own?
+> Calculate these on your own
 
 # Drawing the Histogram
 
@@ -38,7 +46,7 @@ df.hist(column="Fare")
 
 # Conclusions
 
-Just from these two simple calculations: mean, median, mode, and histogram, what can you concluded from the data? What sorts of statements can you confidently say about the Titanic and the people aboard?
+Just from these two simple calculations: mean, median, mode, and histogram, what can you concluded from the data? What sorts of statements can you confidently say about the Titanic and the people aboard? Were most people old or young? Was it a ship full of children or the elderly?
 
 # Stop for a Second
 

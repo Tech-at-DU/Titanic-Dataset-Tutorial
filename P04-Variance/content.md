@@ -9,46 +9,63 @@ Now lets start to look at how we can start to describe data and begin to get our
 
 **Variance** is another piece of descriptive statistics. It is a measure of how spread out the data is or to put it another way it measures how far a set of numbers is spread out from their average value.
 
+Here's a way to visualize a high and a low variance series of data:
+
+![variance](assets/variance-comp.svg.png)
+
+If there is a very low variance, then taking the average means a lot. It means a lot to say the average salary of a software engineer in SF is $100,000/year because there is low variance around this set, but what if there was high variance? What if most engineers were paid $40,000 and then a few engineers made $2M per year. Then you wouldn't want to be an engineer! The average wouldn't mean anything!
+
 We can use the NumPy function `.var(arr)` to find the variance score of an array. The `.var(arr)` function uses "the average of the squared deviations from the mean"—which in english reads: The average of the square of the absolute difference between each element and the average of the whole dataset.
 
-```
-var = np.mean((x - np.mean(x))**2)
-```
+![variance](assets/sample_variance.svg)
+
+* S^2	= sample variance
+* x_i	= the value of the one observation
+* x(bar)	= the mean value of all observations
+* n	= the number of observations
+
+> [info]
+> The `**` operator is the exponential operator, so `**2` means "raised to the 2nd power."
 
 In a Juypter Notebook, use the following code to calculate the variance of two arrays:
 
 ```py
-low_variance = [7,8,7,8,9,6,7,7,7,8,9,8,7,4]
+variance_1 = [7,8,7,8,9,6,7,7,7,8,9,8,7,4]
 
-print("Variance:", np.var(low_variance))
-print("Mean:", np.mean(low_variance))
-print("Min:", np.min(low_variance))
-print("Max:", np.max(low_variance))
-print("Range:", np.max(low_variance) - np.min(low_variance))
+print("Variance:", np.var(variance_1))
+print("Mean:", np.mean(variance_1))
+print("Min:", np.min(variance_1))
+print("Max:", np.max(variance_1))
+print("Range:", np.max(variance_1) - np.min(variance_1))
 
 ```
 
-Now lets look at a series with high variance:
+Now lets look at another series:
 
 ```py
-high_variance = [102,2,50023,30,3040,50,20,1,50,-304,-50349]
+variance_2 = [102,2,50023,30,3040,50,20,1,50,-304,-50349]
 
-print("Variance:",np.var(high_variance))
-print("Mean:", np.mean(high_variance))
-print("Min:", np.min(high_variance))
-print("Max:", np.max(high_variance))
-print("Range:", np.max(high_variance) - np.min(high_variance))
+print("Variance:",np.var(variance_2))
+print("Mean:", np.mean(variance_2))
+print("Min:", np.min(variance_2))
+print("Max:", np.max(variance_2))
+print("Range:", np.max(variance_2) - np.min(variance_2))
 ```
+
+> [action]
+> Which series had had a higher variance?
 
 # Standard Deviation
 
-Another key metric for explaining variance is to take a series' **standard deviation**.
+Another key metric for explaining variance is to take a series' **standard deviation**. Standard deviation gives you an objective measurement of variance. Standard deviation helps us by knowing whether the data huddles near the mean, or is spread out far away from the mean.
 
-Standard deviation is defined as the squareroot of the sum of the square of all deviations from the mean divided by one less the total number of values.
+Standard deviation is just the squareroot of the variance! We squared the differences when we were finding the variance to get all positive values, so when we take the square root of the variance, it is still positive, but the units now fit the original series.
 
 ![standard deviation](assets/std.png)
 
-As a challenge, write the python for each step to create your own standard deviation function. Then check your work, using the NumPy `.std()` function.
+This reads "the standard deviation is equal to sum of the square of all deviations from the mean divided by the total number of values."
+
+As a challenge, write the code for each step to create your own standard deviation function. Then check your work, using the NumPy `.std()` function.
 
 ```py
 def standard_deviation(series):
