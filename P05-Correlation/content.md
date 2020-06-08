@@ -79,9 +79,9 @@ df['Sex'].str.get_dummies().corrwith(df['Survived']/df['Survived'].max())
 
 [`str.get_dummies`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Series.str.get_dummies.html) creates dummy (integer) variables that correspond to the string values, and [`corrwith`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.corrwith.html) is another way to compute correlation when you need to do so between a mixture of rows and columns ([`corr`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.corr.html) just works with columns only).
 
-```[info]
-**NOTE**–Correlation is expressed as a number between -1 and 1, but correlation is not the probability that something occurs.
-```
+
+**NOTE**–Correlation is expressed as a number between -1 and 1, but correlation is _not_ the probability that something occurs.
+
 
 So what can we conclude?
 
