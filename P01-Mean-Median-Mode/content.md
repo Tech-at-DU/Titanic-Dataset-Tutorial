@@ -211,9 +211,8 @@ Use this [Pandas Cheat Sheet](https://www.dataquest.io/blog/pandas-cheat-sheet/)
 
 Another useful method is `.shape()` which returns an array with the number of rows and columns in a DataFrame.
 
-Try it by querying for all children and then checking the number of rows (number of children) and columns (number of features)
+Try using it on the data frame above.
 
 ```py
-children = df[df['Age'] < 16]
-children.shape
+df.shape
 ```
