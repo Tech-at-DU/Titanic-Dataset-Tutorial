@@ -22,9 +22,9 @@ To start honing in on providing confident answers to questions like those, we fi
 We can use the mean, median, and mode functions to gain some **insights** about people's age aboard the Titanic. Use yor methods first and then verify them with the Pandas mean, median, and mode functions.
 
 ```py
-df.mean('Age')
-df.median('Age')
-df.mode('Age')
+df['Age'].mean()
+df['Age'].median()
+df['Age'].mode()
 ```
 
 > [action]
