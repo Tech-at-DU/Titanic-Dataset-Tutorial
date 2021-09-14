@@ -1,7 +1,5 @@
----
-title: "Get started writing Jupyter Notebooks!"
-slug: jupyter-notebooks
----
+
+# Get started writing Jupyter Notebooks
 
 Welcome! This set of tutorials is built to get total beginners started with the fundamentals of computational data analysis, the foundations of data science, machine learning, and artificial intelligence.
 
@@ -27,10 +25,8 @@ Anaconda comes installed with:
 
 # Installing Anaconda
 
->[action]
->
-> Please follow this tutorial to install Anaconda on your computer:
-> [Install Anaconda Navigator Tutorial](https://www.datacamp.com/community/tutorials/installing-anaconda-mac-os-x))
+Please follow this tutorial to install Anaconda on your computer:
+[Install Anaconda Navigator Tutorial](https://www.datacamp.com/community/tutorials/installing-anaconda-mac-os-x))
 
 # Getting Started with Jupyter Notebooks
 
